@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\NuevoCreyente;
+use App\Enlace;
 use Illuminate\Http\Request;
 
-class NuevoCreyenteController extends Controller
+class EnlaceController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -24,7 +24,7 @@ class NuevoCreyenteController extends Controller
      */
     public function create()
     {
-        return view('admin.creyentes.create');
+        //
     }
 
     /**
@@ -41,10 +41,10 @@ class NuevoCreyenteController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\NuevoCreyente  $nuevoCreyente
+     * @param  \App\Enlace  $enlace
      * @return \Illuminate\Http\Response
      */
-    public function show(NuevoCreyente $nuevoCreyente)
+    public function show(Enlace $enlace)
     {
         //
     }
@@ -52,10 +52,10 @@ class NuevoCreyenteController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\NuevoCreyente  $nuevoCreyente
+     * @param  \App\Enlace  $enlace
      * @return \Illuminate\Http\Response
      */
-    public function edit(NuevoCreyente $nuevoCreyente)
+    public function edit(Enlace $enlace)
     {
         //
     }
@@ -64,10 +64,10 @@ class NuevoCreyenteController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\NuevoCreyente  $nuevoCreyente
+     * @param  \App\Enlace  $enlace
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, NuevoCreyente $nuevoCreyente)
+    public function update(Request $request, Enlace $enlace)
     {
         //
     }
@@ -75,10 +75,10 @@ class NuevoCreyenteController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\NuevoCreyente  $nuevoCreyente
+     * @param  \App\Enlace  $enlace
      * @return \Illuminate\Http\Response
      */
-    public function destroy(NuevoCreyente $nuevoCreyente)
+    public function destroy(Enlace $enlace)
     {
         //
     }
