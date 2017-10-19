@@ -12669,6 +12669,13 @@ Copyright (c) 2014 Daniel Eden
 	margin-top: 80px;
 }
 
+.title-1{ font-size: 3rem;   }
+.title-2{ font-size: 2.5rem; }
+.title-3{ font-size: 2rem;   }
+.title-4{ font-size: 1.5rem; }
+.title-5{ font-size: 1rem;   }
+.title-6{ font-size: 0.8rem; }
+
 /*.card-panel{
 	width: 700px;
 	
@@ -12676,3 +12683,56 @@ Copyright (c) 2014 Daniel Eden
 .headertitle{
 	text-align: center;
 }
+
+/*NUEVO CREYENTES INDEX*/
+.table1 th{
+	font-size:0.8rem;
+	text-align: center;
+}
+
+/*Button*/
+  .btn-alt {
+    color: #fff;
+    background-color: #07B589;
+    border-color: #046b51;
+  }
+  .btn-alt:focus,
+  .btn-alt.focus {
+    color: #fff;
+    background-color: #046b51;
+    border-color: #07B589;
+  }
+  .btn-alt:hover {
+    color: #fff;
+    background-color: #07B589;
+    border-color: #07B589;
+  }
+  .btn-alt:active,
+  .btn-alt.active,
+  .open > .dropdown-toggle.btn-alt {
+    color: #fff;
+    background-color: #046b51;
+    border-color: #07B589;
+  }
+  .btn-alt:active:hover,
+  .btn-alt.active:hover,
+  .open > .dropdown-toggle.btn-alt:hover,
+  .btn-alt:active:focus,
+  .btn-alt.active:focus,
+  .open > .dropdown-toggle.btn-alt:focus,
+  .btn-alt:active.focus,
+  .btn-alt.active.focus,
+  .open > .dropdown-toggle.btn-alt.focus {
+    color: #fff;
+    background-color: #07B589;
+    border-color: #07B589;
+  }
+  .btn-alt:active,
+  .btn-alt.active,
+  .open > .dropdown-toggle.btn-alt {
+    background-image: none;
+  }
+  .btn-alt .badge {
+    color: #07B589;
+    background-color: #fff;
+  }
