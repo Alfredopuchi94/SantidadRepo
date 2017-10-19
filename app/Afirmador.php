@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Afirmador extends Model
 {
-    protected $table = "afirmadores";
+    protected $table = "afirmadors";
 
   protected $fillable = ['nombreAfirmador', 'id_enlace'];
 
