@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Afirmador;
 use Illuminate\Http\Request;
+use App\Enlace;
+use App\Afirmador;
+use Laracasts\Flash\Flash;
+use App\Http\Requests\AfirmadorRequest;
 
 class AfirmadorController extends Controller
 {
@@ -35,6 +38,11 @@ class AfirmadorController extends Controller
      */
     public function store(Request $request)
     {
+        $afirmadores = new Afirmador($request->all());
+        $afirmadores->save();
+
+        Flash::success("Se ah registrado correctamente " . $afirmadores->nombreAfirmador . " de forma exitosa!");
+        return redirect()->route('servidores.index');
     }
 
     /**
@@ -56,7 +64,9 @@ class AfirmadorController extends Controller
      */
     public function edit(Afirmador $afirmador)
     {
-        //
+        $afirmador = Afirmador::find($id);
+        $enlaces = Enlace::all();
+        return view('admin.servidores.afirmadores.edit')->with('enlaces',$enlaces)->with('afirmador',$afirmador);
     }
 
     /**
@@ -68,7 +78,11 @@ class AfirmadorController extends Controller
      */
     public function update(Request $request, Afirmador $afirmador)
     {
-        //
+        $afirmador = Afirmador::find($id);
+        $afirmador->fill($request->all());
+        $afirmador->save();
+        flash('El Afirmador "'. $afirmador->nombreAfirmador .'" Se ah editado con exito', 'warning');
+        return redirect()->route('servidores.index');
     }
 
     /**
@@ -79,6 +93,10 @@ class AfirmadorController extends Controller
      */
     public function destroy(Afirmador $afirmador)
     {
-        //
+        $afirmador = Afirmador::find($id);
+        $afirmador->delete();
+
+        Flash::error("El Afirmador " .$afirmador->nombreAfirmador . "a sido borrado de forma exitosa");
+        return redirect()->route('servidores.index');
     }
 }
