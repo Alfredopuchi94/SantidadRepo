@@ -27,7 +27,8 @@ class AfirmadorController extends Controller
      */
     public function create()
     {
-        //
+        $enlaces = Enlace::all();
+        return view('admin.servidores.afirmadores.create')->with('enlaces',$enlaces);
     }
 
     /**
