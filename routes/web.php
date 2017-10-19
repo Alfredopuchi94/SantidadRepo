@@ -34,8 +34,8 @@ Route::group(['prefix' => 'admin'], function() {
         'as'   => 'admin.enlaces.destroy'
      ]);
 
-     Route::resource('aformadores','AfirmadorController');
-     Route::get('aformadores/{nombre}/destroy', [
+     Route::resource('afirmadores','AfirmadorController');
+     Route::get('afirmadores/{nombre}/destroy', [
         'uses' => 'NuevoCreyenteController@destroy',
         'as'   => 'admin.aformadores.destroy'
      ]);
