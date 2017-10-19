@@ -27,7 +27,7 @@ class EnlaceController extends Controller
      */
     public function create()
     {
-        return view('servidores.enlaces.create');
+        return view('admin.servidores.enlaces.create');
     }
 
     /**
