@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Enlace;
 use Illuminate\Http\Request;
+use App\Enlace;
+use App\Afirmador;
+use Laracasts\Flash\Flash;
+use App\Http\Requests\EnlaceRequest;
 
 class EnlaceController extends Controller
 {
@@ -35,7 +38,12 @@ class EnlaceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $enlaces = new Enlace($request->all());
+
+        $enlaces->save();
+
+        Flash::success("Se ah registrado correctamente " . $enlaces->nombreEnlace . " de forma exitosa!");
+        return redirect()->route('servidores.index');
     }
 
     /**
@@ -56,7 +64,8 @@ class EnlaceController extends Controller
      */
     public function edit(Enlace $enlace)
     {
-        //
+        $enlace = Enlace::find($id);
+        return view('')->with('enlace', $enlace);
     }
 
     /**
@@ -68,7 +77,11 @@ class EnlaceController extends Controller
      */
     public function update(Request $request, Enlace $enlace)
     {
-        //
+        $enlace = Enlace::find($id);
+        $enlace->fill($request->all());
+        $enlace->save();
+        flash('El Enlace "'. $enlace->nombreEnlace.'" Se ah editado con exito', 'warning');
+        return redirect()->route('servidores.index');
     }
 
     /**
@@ -79,6 +92,9 @@ class EnlaceController extends Controller
      */
     public function destroy(Enlace $enlace)
     {
-        //
+        $enlace = Enlace::find($id);
+        $enlace->delete(); 
+        Flash::error("El enlace " . $enlace->nombreEnlace . "a sido borrado de forma exitosa");
+        return redirect()->route('servidores.index');
     }
 }
