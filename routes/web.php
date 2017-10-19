@@ -40,4 +40,9 @@ Route::group(['prefix' => 'admin'], function() {
         'as'   => 'admin.aformadores.destroy'
      ]);
 
+     Route::get('servidores', [
+        'uses' => 'ServidorController@index',
+        'as'   => 'admin.servidores.index'
+     ]);
+
 });
