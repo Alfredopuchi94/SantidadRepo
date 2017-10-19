@@ -16,9 +16,9 @@ Route::get('/', function () {
 });
 
 Route::group(['prefix' => 'admin'], function() {
-     Route::resource('users','UsersController');
+     Route::resource('users','UserController');
      Route::get('users/{id}/destroy', [
-        'uses' => 'UsersController@destroy',
+        'uses' => 'UserController@destroy',
         'as'   => 'admin.users.destroy'
      ]);
 
@@ -28,28 +28,16 @@ Route::group(['prefix' => 'admin'], function() {
      	'as'   => 'admin.creyentes.destroy'
      ]);
 
-    /*Route::resource('maestros','MaestrosController');
-     Route::get('maestros/{id}/destroy', [
-        'uses' => 'MaestrosController@destroy',
-        'as'   => 'admin.maestros.destroy'
-     ]); */   
+     Route::resource('enlaces','EnlaceController');
+     Route::get('enlaces/{nombre}/destroy', [
+        'uses' => 'NuevoCreyenteController@destroy',
+        'as'   => 'admin.enlaces.destroy'
+     ]);
 
-
-    /* Route::resource('servidores','ServidoresController');
-
-    Route::group(['prefix' => 'servidores'], function() {
-     	Route::resource('enlaces', 'EnlacesController');
-     	Route::resource('afirmadores', 'AfirmadoresController');
-
-        Route::get('servidores/enlaces/{id}/destroy', [
-        'uses' => 'EnlacesController@destroy',
-        'as'   => 'admin.servidores.enlaces.destroy'
-        ]);
-
-        Route::get('servidores/afirmadores/{id}/destroy', [
-        'uses' => 'AfirmadoresController@destroy',
-        'as'   => 'admin.servidores.afirmadores.destroy'
-        ]);
-    });*/
+     Route::resource('aformadores','AfirmadorController');
+     Route::get('aformadores/{nombre}/destroy', [
+        'uses' => 'NuevoCreyenteController@destroy',
+        'as'   => 'admin.aformadores.destroy'
+     ]);
 
 });
