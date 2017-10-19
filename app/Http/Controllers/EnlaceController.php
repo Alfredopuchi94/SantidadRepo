@@ -43,7 +43,7 @@ class EnlaceController extends Controller
         $enlaces->save();
 
         Flash::success("Se ah registrado correctamente " . $enlaces->nombreEnlace . " de forma exitosa!");
-        return redirect()->route('servidores.index');
+        return redirect()->route('admin.servidores.index');
     }
 
     /**
@@ -81,7 +81,7 @@ class EnlaceController extends Controller
         $enlace->fill($request->all());
         $enlace->save();
         flash('El Enlace "'. $enlace->nombreEnlace.'" Se ah editado con exito', 'warning');
-        return redirect()->route('servidores.index');
+        return redirect()->route('admin.servidores.index');
     }
 
     /**
