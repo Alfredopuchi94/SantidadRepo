@@ -59,18 +59,3 @@
 		</div>
 	</div>
 @endsection
-
-						{{-- <th>Cedula</th>
-						<th>Descripcion</th>
-						<th>Año</th>
-						<th>Fecha de Servicio</th>
-						<th>Nombres y Apellidos</th>
-						<th>Edad</th>
-						<th>Direccion</th>
-						<th>Telefono</th>
-						<th>Correo</th>
-						<th>Persona que lo invito</th>
-						<th>Motivo de Oracion</th>
-						<th>Nombre del Lider</th>
-						<th>Afirmador Asignado</th>
-						<th>Accion</th>	 --}}
