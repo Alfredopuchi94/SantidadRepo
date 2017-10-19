@@ -9,7 +9,7 @@
 			<div class="card card-panel">
 				<div class="card-header">
 		   			 <h3 class="headertitle">Nuevos Creyentes</h3>
-		 		 </div>
+		 		</div>
 		  		<div class="card-body">
 		    		<form>
 					  <div class="form-group">
@@ -109,7 +109,7 @@
 					  </div>
 
 					  <div class="text-center">
-					  	<button type="button" class="btn btn-info w-50">Registrar</button>
+					  	<button type="button" class="btn btn-info w-50 pull-right">Registrar</button>
 					  </div>
 					</form>
 		  		</div>

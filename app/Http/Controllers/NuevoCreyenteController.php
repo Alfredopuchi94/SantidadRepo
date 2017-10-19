@@ -14,7 +14,7 @@ class NuevoCreyenteController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.creyentes.index');
     }
 
     /**

@@ -30,7 +30,7 @@ class CreateNuevoCreyentesTable extends Migration
             $table->string('lider');
             $table->integer('id_afirmador')->unsigned();
 
-            $table->foreign('id_afirmador')->references('id')->on('afirmadores')->onDelete('no action');
+            $table->foreign('id_afirmador')->references('id')->on('afirmadors')->onDelete('no action');
             $table->timestamps();
         });
     }

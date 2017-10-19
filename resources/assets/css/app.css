@@ -2,10 +2,23 @@
 	margin-top: 80px;
 }
 
+.title-1{ font-size: 3rem;   }
+.title-2{ font-size: 2.5rem; }
+.title-3{ font-size: 2rem;   }
+.title-4{ font-size: 1.5rem; }
+.title-5{ font-size: 1rem;   }
+.title-6{ font-size: 0.8rem; }
+
 /*.card-panel{
 	width: 700px;
 	
 }*/
 .headertitle{
+	text-align: center;
+}
+
+/*NUEVO CREYENTES INDEX*/
+.table1 th{
+	font-size:0.8rem;
 	text-align: center;
 }
