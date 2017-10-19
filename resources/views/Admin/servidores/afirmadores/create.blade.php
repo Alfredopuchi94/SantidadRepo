@@ -1,6 +1,6 @@
 @extends('template.main')
 
-@section('title', 'crear usuario')
+@section('title', 'Registrar Afirmador')
 
 @section('content')
 <div class="container">
@@ -8,7 +8,7 @@
 		<div class="col-sm-6 mr-auto ml-auto">
 			<div class="card card-panel">
 				<div class="card-header">
-		   			 <h3 class="headertitle">Nuevos Creyentes</h3>
+		   			 <h3 class="headertitle">Registrar Afirmador</h3>
 		 		</div>
 		  		<div class="card-body">
 		    		{!! Form::open(['route' => 'afirmadores.store', 'method' => 'POST', 'files' => true] ) !!}
@@ -27,8 +27,8 @@
 							</select><br>
 					  </div>
 
-					  <div class="text-center">
-					  	<button type="button" class="btn btn-alt w-50 pull-right">Registrar</button>
+					  <div class="text-right">
+					  	<button type="button" class="btn btn-alt w-50 ">Registrar afirmador</button>
 					  </div>
 					{!! Form::close() !!}
 		  		</div>
