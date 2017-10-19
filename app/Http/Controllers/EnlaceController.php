@@ -46,7 +46,6 @@ class EnlaceController extends Controller
      */
     public function show(Enlace $enlace)
     {
-        //
     }
 
     /**

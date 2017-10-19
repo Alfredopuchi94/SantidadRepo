@@ -35,7 +35,6 @@ class AfirmadorController extends Controller
      */
     public function store(Request $request)
     {
-        //
     }
 
     /**
