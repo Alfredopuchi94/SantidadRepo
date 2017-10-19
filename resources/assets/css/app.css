@@ -22,3 +22,50 @@
 	font-size:0.8rem;
 	text-align: center;
 }
+
+/*Button*/
+  .btn-alt {
+    color: #fff;
+    background-color: #07B589;
+    border-color: #046b51;
+  }
+  .btn-alt:focus,
+  .btn-alt.focus {
+    color: #fff;
+    background-color: #046b51;
+    border-color: #07B589;
+  }
+  .btn-alt:hover {
+    color: #fff;
+    background-color: #07B589;
+    border-color: #07B589;
+  }
+  .btn-alt:active,
+  .btn-alt.active,
+  .open > .dropdown-toggle.btn-alt {
+    color: #fff;
+    background-color: #046b51;
+    border-color: #07B589;
+  }
+  .btn-alt:active:hover,
+  .btn-alt.active:hover,
+  .open > .dropdown-toggle.btn-alt:hover,
+  .btn-alt:active:focus,
+  .btn-alt.active:focus,
+  .open > .dropdown-toggle.btn-alt:focus,
+  .btn-alt:active.focus,
+  .btn-alt.active.focus,
+  .open > .dropdown-toggle.btn-alt.focus {
+    color: #fff;
+    background-color: #07B589;
+    border-color: #07B589;
+  }
+  .btn-alt:active,
+  .btn-alt.active,
+  .open > .dropdown-toggle.btn-alt {
+    background-image: none;
+  }
+  .btn-alt .badge {
+    color: #07B589;
+    background-color: #fff;
+  }
