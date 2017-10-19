@@ -13,7 +13,7 @@ class servidorController extends Controller
     public function index()
     {
         $enlaces = Enlace::all();
-        $afirmadores = Afirmador::search($request->nombreAfirmador)->orderBy('id', 'ASC')->paginate(5);
+        $afirmadores = Afirmador::orderBy('id', 'ASC')->paginate(6);
         $afirmadores->each(function($afirmadores){
             $afirmadores->enlace;
         });
