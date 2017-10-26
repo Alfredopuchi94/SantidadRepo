@@ -3,13 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\NuevoCreyente;
+use App\Afirmador;
+use Laracasts\Flash\Flash;
 use Illuminate\Http\Request;
 
 class NuevoCreyenteController extends Controller
 {
     public function index()
-    {
-        return view('admin.creyentes.index');
+    {   $afirmadores = Afirmador::all();
+        $creyentes = NuevoCreyente::orderBy('id', 'ASC')->paginate(25);
+        $creyentes->each(function($creyentes){
+            $creyentes->afirmador;
+        });
+        return view('admin.creyentes.index')->with('creyentes',$creyentes)->with('afirmadores',$afirmadores);
+
     }
 
     /**
@@ -19,7 +26,8 @@ class NuevoCreyenteController extends Controller
      */
     public function create()
     {
-        return view('admin.creyentes.create');
+        $afirmadores = Afirmador::all();
+        return view('admin.creyentes.create')->with('afirmadores',$afirmadores);
     }
 
     /**
@@ -30,7 +38,11 @@ class NuevoCreyenteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+         $creyente =new NuevoCreyente($request->all());
+        $creyente->save();
+
+        // Flash::success("Se ah registrado correctamente " . $creyente->nombrePersona . " de forma exitosa!");
+        return redirect()->route('creyentes.index');
     }
 
     /**

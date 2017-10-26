@@ -26,8 +26,8 @@ class EnlaceController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        return view('admin.servidores.enlaces.create');
+    {    $enlaces = Enlace::all();
+        return view('admin.servidores.enlaces.create')->with('enlaces',$enlaces);
     }
 
     /**
@@ -42,7 +42,7 @@ class EnlaceController extends Controller
 
         $enlaces->save();
 
-        Flash::success("Se ah registrado correctamente " . $enlaces->nombreEnlace . " de forma exitosa!");
+        // Flash::success("Se ah registrado correctamente " . $enlaces->nombreEnlace . " de forma exitosa!");
         return redirect()->route('admin.servidores.index');
     }
 
