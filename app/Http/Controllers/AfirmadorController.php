@@ -43,7 +43,7 @@ class AfirmadorController extends Controller
         $afirmadores->save();
 
         Flash::success("Se ah registrado correctamente " . $afirmadores->nombreAfirmador . " de forma exitosa!");
-        return redirect()->route('servidores.index');
+        return redirect()->route('admin.servidores.index');
     }
 
     /**
