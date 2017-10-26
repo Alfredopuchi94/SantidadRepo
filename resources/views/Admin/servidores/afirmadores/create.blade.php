@@ -19,7 +19,7 @@
 
 					  <div class="form-group">
 					  	<label for="nombreafir">Nombre del Enlace</label>
-					  		<select name="id_afirmador" class="form-control" required>
+					  		<select name="id_enlace" class="form-control" required>
 					  			@foreach ($enlaces as $enlace)
 									<option value="{{$enlace->id}}">{{$enlace->nombreEnlace}}</option>
 								@endforeach
