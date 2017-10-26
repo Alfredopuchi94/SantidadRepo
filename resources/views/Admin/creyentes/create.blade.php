@@ -95,19 +95,14 @@
 					  </div>
 
 
-					  {{-- <div class="form-group">
-					    <label for="nombrelider">Afirmador</label>
-					    <input type="text" class="form-control" name="nombrelider">
-					  </div> --}}
-
-					  <div class="form-group">
-					  	<label for="nombreafir">Nombre del Afirmador</label>
-					  		<select name="id_afirmador" class="form-control" required>
-									<option value="">1</option>
-									<option value="">2</option>
-									<option value="">3</option>
-											
-							</select><br>
+					  <div class="form-gorup">
+						{{ Form::label('id_afirmador', 'Asignar un afirmador')}}
+						<select name="id_afirmador" class="form-control" required>
+							{{-- <option value="{{ $afirmador->id_afirmador}}" disabled selected>{{ $afirmador->nombreAfirmador}}</option> --}}
+							@foreach($afirmadores as $afirmador) 
+								<option value="{{ $afirmador->id}}"> {{ $afirmador->nombreAfirmador }} </option>
+							@endforeach
+						</select><br>
 					  </div>
 
 					  <div class="text-center">
