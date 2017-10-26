@@ -52,8 +52,8 @@
 							 	<td>{{ $creyente->oracion }}</td>
 							 	<td>{{ $creyente->lider }}</td>
 							 	<td>{{ $creyente->afirmador->nombreAfirmador }}</td>
-							 	<td> <a href="{{ route('creyentes.edit', $creyente->id) }}" class="btn btn-warning btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a> </td>
-							 	<td> <a href="{{ route('admin.creyentes.destroy', $creyente->id) }}" onclick="return confirm('¿esta seguro de elimar a esta persona?')" class="btn btn-danger btn-sm"> <i class="fa fa-trash-o" aria-hidden="true"></a>
+							 	<td> <a href="{{ route('creyentes.edit', $creyente->cedula) }}" class="btn btn-warning btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a> </td>
+							 	<td> <a href="{{ route('admin.creyentes.destroy', $creyente->cedula) }}" onclick="return confirm('¿esta seguro de elimar a esta persona?')" class="btn btn-danger btn-sm"> <i class="fa fa-trash-o" aria-hidden="true"></i></a>
 							    </td>
 							  </tr>
 							@endforeach

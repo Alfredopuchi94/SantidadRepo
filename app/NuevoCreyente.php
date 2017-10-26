@@ -25,4 +25,8 @@ class NuevoCreyente extends Model
 			'oracion',
 			'lider',
 			'id_afirmador'];
+
+	public function afirmador(){
+      return $this->belongsTo('App\Afirmador', 'id_afirmador');
+    }
 }
