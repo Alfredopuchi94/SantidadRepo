@@ -11,7 +11,7 @@ class NuevoCreyenteController extends Controller
 {
     public function index()
     {   $afirmadores = Afirmador::all();
-        $creyentes = NuevoCreyente::orderBy('id', 'ASC')->paginate(25);
+        $creyentes = NuevoCreyente::orderBy('created_at', 'DES')->paginate(25);
         $creyentes->each(function($creyentes){
             $creyentes->afirmador;
         });
@@ -62,9 +62,11 @@ class NuevoCreyenteController extends Controller
      * @param  \App\NuevoCreyente  $nuevoCreyente
      * @return \Illuminate\Http\Response
      */
-    public function edit(NuevoCreyente $nuevoCreyente)
+    public function edit(NuevoCreyente $cedula)
     {
-        //
+        $creyente = NuevoCreyente::find($cedula);
+        $afirmadores = Afirmador::all();
+        return view('admin.creyentes.edit')->with('creyente', $creyente)->with('afirmadores', $afirmadores);
     }
 
     /**
@@ -74,9 +76,13 @@ class NuevoCreyenteController extends Controller
      * @param  \App\NuevoCreyente  $nuevoCreyente
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, NuevoCreyente $nuevoCreyente)
+    public function update(Request $request, NuevoCreyente $cedula)
     {
-        //
+        $creyente = NuevoCreyente::find($id);
+        $creyente->fill($request->all());
+        $creyente->save();
+        // flash('El Nuevo Creyente "'. $creyente->nombrePersona.'" Se ah editado con exito', 'warning');
+        return redirect()->route('admin.creyentes.index');
     }
 
     /**
