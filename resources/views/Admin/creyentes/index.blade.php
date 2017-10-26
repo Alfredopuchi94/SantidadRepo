@@ -37,22 +37,26 @@
 							<th><i class="fa fa-trash-o  fa-2x" aria-hidden="true"></i></th>	
 					  </thead>
 					    <tbody>
-						    <tr>
-						      <td>25043678</td>
-						      <td>Nuevo creyente</td>
-						      <td>2017</td>
-						      <td>2017-05-05</td>
-						      <td>Alfredo Puchi</td>
-						      <td>22</td>
-						      <td>km 18 via la concepcion</td>
-						      <td>0412-6691727</td>
-						      <td>alfredopuchi94@gmail.com</td>
-						      <td>yaceni delgado</td>
-						      <td>familia</td>
-						      <td>yaceni delgado</td>
-						      <td></td>
-						      <td>asd</td>
-						    </tr>
+						    @foreach($creyentes as $creyente)
+								<tr class="upper">
+							 	<td><em>{{ $creyente->cedula }}</em></td>
+							 	<td>{{ $creyente->descripcion }}</td>
+							 	<td>{{ $creyente->ano }}</td>
+							 	<td>{{ $creyente->fechaServicio }}</td>
+							 	<td>{{ $creyente->nombrePersona}}</td>
+							 	<td>{{ $creyente->edad }}</td>
+							 	<td>{{ $creyente->dire }}</td>
+							 	<td>{{ $creyente->telf }}</td>
+							 	<td>{{ $creyente->email }}</td>
+							 	<td>{{ $creyente->invitacion }}</td>
+							 	<td>{{ $creyente->oracion }}</td>
+							 	<td>{{ $creyente->lider }}</td>
+							 	<td>{{ $creyente->afirmador->nombreAfirmador }}</td>
+							 	<td> <a href="{{ route('creyentes.edit', $creyente->id) }}" class="btn btn-warning btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a> </td>
+							 	<td> <a href="{{ route('admin.creyentes.destroy', $creyente->id) }}" onclick="return confirm('¿esta seguro de elimar a esta persona?')" class="btn btn-danger btn-sm"> <i class="fa fa-trash-o" aria-hidden="true"></a>
+							    </td>
+							  </tr>
+							@endforeach
 					</table>
 				</div>
 				</div>
