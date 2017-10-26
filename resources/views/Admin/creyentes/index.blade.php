@@ -33,8 +33,8 @@
 							<th>Motivo de Oracion</th>
 							<th>Nombre del Lider</th>
 							<th>Afirmador Asignado</th>
-							<th><i class="fa fa-pencil-square-o" aria-hidden="true"></i></th>	
-							<th><i class="fa fa-trash-o" aria-hidden="true"></i></th>	
+							<th><i class="fa fa-pencil-square-o  fa-2x" aria-hidden="true"></i></th>	
+							<th><i class="fa fa-trash-o  fa-2x" aria-hidden="true"></i></th>	
 					  </thead>
 					    <tbody>
 						    <tr>
