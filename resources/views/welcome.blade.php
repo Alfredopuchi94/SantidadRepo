@@ -4,6 +4,8 @@
 
 @section('content')
 
-    <h1>Santidad de Dios</h1>
+	<div class="container">
+    	<h1 class="text-center">Santidad de Dios</h1>
+	</div>
     
 @endsection

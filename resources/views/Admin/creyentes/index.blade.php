@@ -12,7 +12,7 @@
 						<div class="row">
 							<div class="col-md-6"><h4>NUEVOS CREYENTES</h4></div>
 							<div class="col-md-6">
-								<button type="button" class="btn btn-info w-40 pull-right">Registrar nuevos creyentes</button>
+								<a href="{{ route('creyentes.create') }}" class="btn btn-info w-40 pull-right">Registrar nuevos creyentes</a>
 							</div>
 						</div>
 					</div>
@@ -33,7 +33,8 @@
 							<th>Motivo de Oracion</th>
 							<th>Nombre del Lider</th>
 							<th>Afirmador Asignado</th>
-							<th>Accion</th>	
+							<th><i class="fa fa-pencil-square-o" aria-hidden="true"></i></th>	
+							<th><i class="fa fa-trash-o" aria-hidden="true"></i></th>	
 					  </thead>
 					    <tbody>
 						    <tr>
