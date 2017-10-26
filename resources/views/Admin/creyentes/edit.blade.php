@@ -12,7 +12,7 @@
 		 		</div>
 		  		<div class="card-body">
 
-		    		{!! Form::open(['route' => 'creyentes.update', 'method' => 'PUT']) !!}
+		    		{!! Form::open(['route' => ['creyentes.update', $creyente], 'method' => 'PUT']) !!}
 		    		
 					  <div class="form-group">
 					    <label for="cedula">Cedula</label>
