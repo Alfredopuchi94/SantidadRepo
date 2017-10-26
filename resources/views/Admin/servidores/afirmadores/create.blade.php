@@ -28,7 +28,7 @@
 					  </div>
 
 					  <div class="text-right">
-					  	<button type="button" class="btn btn-alt w-50 ">Registrar afirmador</button>
+					  	<button type="submit" class="btn btn-alt w-50">Registrar Afirmador</button>
 					  </div>
 					{!! Form::close() !!}
 		  		</div>

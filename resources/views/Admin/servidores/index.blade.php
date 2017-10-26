@@ -44,7 +44,7 @@
 							    <td>{{ $afirmador->nombreAfirmador }}</td>
 							    <td>
 								    <a href="{{ route('afirmadores.edit', $afirmador->id) }}" class="btn btn-warning"><i class="fa fa-pencil-square-o " aria-hidden="true"></i></a>
-								    <a href="{{ route('admin.aformadores.destroy', $afirmador->id) }}" onclick="return confirm('¿esta seguro de elimar a un usuario?')" class="btn btn-danger"><i class="fa fa-trash-o " aria-hidden="true"></i></a> 
+								    <a href="{{ route('admin.afirmadores.destroy', $afirmador->id) }}" onclick="return confirm('¿esta seguro de elimar a un usuario?')" class="btn btn-danger"><i class="fa fa-trash-o " aria-hidden="true"></i></a> 
 							    </td>
 							  </tr>
 							@endforeach
