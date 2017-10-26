@@ -11,31 +11,33 @@
 		   			 <h3 class="headertitle">Nuevos Creyentes</h3>
 		 		</div>
 		  		<div class="card-body">
-		    		<form>
+
+		    		{!! Form::open(['route' => 'creyentes.store', 'method' => 'POST']) !!}
+		    		
 					  <div class="form-group">
 					    <label for="cedula">Cedula</label>
-					    <input type="text" class="form-control" id="cedula" placeholder="Cedula o Pasaporte">
+					    <input type="text" class="form-control" name="cedula" placeholder="Cedula o Pasaporte">
 					  </div>
 
 					  <div class="form-group">
 					    <label for="cedula">Nombre Completo</label>
-					    <input type="text" class="form-control" id="cedula" placeholder="Nombres y Apellidos">
+					    <input type="text" class="form-control" name="nombrePersona" placeholder="Nombres y Apellidos">
 					  </div>
 
 					  <div class="form-group">
 					    <label for="direccion">Direccion</label>
-					    <input type="text" class="form-control" id="direccion" placeholder="E.j: Av 80A, Calle 79D">
+					    <input type="text" class="form-control" name="dire" placeholder="E.j: Av 80A, Calle 79D">
 					  </div>
 
 					  <div class="form-group">
 					    <label for="edad">Edad</label>
-					    <input type="number" class="form-control" id="edad">
+					    <input type="number" class="form-control" name="edad">
 					  </div>
 					
 					  <div class="form-group">
 					    <label for="descripcion">Descripcion</label>
-					    <input type="text" class="form-control" id="descripcion" aria-describedby="descHelp">
-					    <small id="descHelp" class="form-text text-muted"> Nuevo Creyentes, Acompañante, Bautizos</small>
+					    <input type="text" class="form-control" name="descripcion" aria-describedby="descHelp">
+					    <small name="descripcion" class="form-text text-muted"> Nuevo Creyentes, Acompañante, Bautizos</small>
 					  </div>
 						
 					  <div class="form-group">
@@ -58,22 +60,22 @@
 
 					  <div class="form-group">
 					    <label for="telefono">Telefono</label>
-					    <input type="number" class="form-control" id="telefono" placeholder="E.j: 04245551234">
+					    <input type="number" class="form-control" name="telf" placeholder="E.j: 04245551234">
 					  </div>
 
 					  <div class="form-group">
 					    <label for="correo">Correo</label>
-					    <input type="text" class="form-control" id="correo" placeholder="E.j: Ejemplo@exam.com">
+					    <input type="text" class="form-control" name="email" placeholder="E.j: Ejemplo@exam.com">
 					  </div>
 
 					  <div class="form-group">
 					    <label for="invitacion">Persona que lo invito</label>
-					    <input type="text" class="form-control" id="invitacion">
+					    <input type="text" class="form-control" name="invitacion">
 					  </div>
 
 					  <div class="form-group">
 					    <label for="motivo">Motivo de oracion</label>
-					    <input type="text" class="form-control" id="motivo">
+					    <input type="text" class="form-control" name="oracion">
 					  </div>
 
 					  <div class="row">
@@ -85,9 +87,9 @@
 						  	 <input type="radio" value="no" name="lider" id="NO">
 						  </div>
 
-						  <div class="form-group col" id="lider">
+						  <div class="form-group col" name="lider">
 						    <label for="nombrelider">Nombre del lider</label>
-						    <input type="text" class="form-control" id="nombrelider">
+						    <input type="text" class="form-control" name="lider">
 						  </div> 
 					  	
 					  </div>
@@ -95,7 +97,7 @@
 
 					  {{-- <div class="form-group">
 					    <label for="nombrelider">Afirmador</label>
-					    <input type="text" class="form-control" id="nombrelider">
+					    <input type="text" class="form-control" name="nombrelider">
 					  </div> --}}
 
 					  <div class="form-group">
@@ -109,9 +111,11 @@
 					  </div>
 
 					  <div class="text-center">
-					  	<button type="button" class="btn btn-info w-50 pull-right">Registrar</button>
+					  	{!! Form::submit('Registrar', ['class' => 'btn btn-primary']) !!}
 					  </div>
-					</form>
+				
+				{!! Form::close() !!}
+
 		  		</div>
 			</div>	
 		</div>

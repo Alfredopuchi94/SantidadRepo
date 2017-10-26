@@ -10,7 +10,7 @@ class NuevoCreyente extends Model
     protected $primaryKey = 'cedula';
     public $incrementing = false;
 
-    protected fillable = [
+    protected $fillable = [
     	
 			'cedula',
 			'nombrePersona',
@@ -19,7 +19,7 @@ class NuevoCreyente extends Model
 			'descripcion',
 			'edad',
 			'dire',
-			'telf'
+			'telf',
 			'email',
 			'invitacion',
 			'oracion',

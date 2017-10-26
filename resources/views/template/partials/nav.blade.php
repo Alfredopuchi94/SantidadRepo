@@ -5,8 +5,8 @@
   </button>
   <div class="collapse navbar-collapse" id="navdd">
     <ul class="navbar-nav">
-      <li class="nav-item"> <a class="nav-link" href="#">item 1</a> </li>
-      <li class="nav-item"> <a class="nav-link" href="#">item 2</a> </li>
+      <li class="nav-item"> <a class="nav-link" href="{{ route('creyentes.index') }}">Nuevos Creyentes</a> </li>
+      <li class="nav-item"> <a class="nav-link" href="{{ route('admin.servidores.index') }}">servidores</a> </li>
       <li class="nav-item"> <a class="nav-link" href="#">item 3</a> </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="dd" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

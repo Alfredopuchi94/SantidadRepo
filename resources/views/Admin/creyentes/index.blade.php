@@ -12,7 +12,7 @@
 						<div class="row">
 							<div class="col-md-6"><h4>NUEVOS CREYENTES</h4></div>
 							<div class="col-md-6">
-								<button type="button" class="btn btn-info w-40 pull-right">Registrar nuevos creyentes</button>
+								<button type="button" class="btn btn-info w-40 pull-right"><a style="color: white;" href="{{ route('creyentes.create') }}">Registrar Nuevos Creyentes</a></button>
 							</div>
 						</div>
 					</div>
