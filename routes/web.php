@@ -35,7 +35,7 @@ Route::group(['prefix' => 'admin'], function() {
      ]);
 
      Route::resource('afirmadores','AfirmadorController');
-     Route::get('afirmadores/{afirmador}/destroy', [
+     Route::get('afirmadores/{id}/destroy', [
         'uses' => 'AfirmadorController@destroy',
         'as'   => 'admin.afirmadores.destroy'
      ]);
