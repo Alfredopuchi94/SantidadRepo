@@ -1,6 +1,6 @@
 @extends('template.main')
 
-@section('title', 'Registrar Enlace')
+@section('title', 'Editar Enlace')
 
 @section('content')
 <div class="container">
@@ -11,7 +11,7 @@
 		   			 <h3 class="headertitle">Registrar Enlace</h3>
 		 		</div>
 		  		<div class="card-body">
-		    		{!! Form::open(['route' => 'enlaces.update', 'method' => 'PUT', 'files' => true] ) !!}
+		    		{!! Form::open(['route' => ['enlaces.update', $enlace], 'method' => 'PUT', 'files' => true] ) !!}
 					  <div class="form-group">
 					    <label for="nombreEnlace">Nombre del Enlace</label>
 					    <input 
@@ -19,7 +19,7 @@
 					    	class="form-control" 
 					    	name="nombreEnlace" 
 					    	id="nombreEnlace" 
-					    	value="{{$afirmador->nombreEnlace}}" 
+					    	value="{{$enlace->nombreEnlace}}" 
 					    	placeholder="Ej.: Jhon Doe">
 					  </div>
 

@@ -62,10 +62,10 @@ class EnlaceController extends Controller
      * @param  \App\Enlace  $enlace
      * @return \Illuminate\Http\Response
      */
-    public function edit(Enlace $enlace)
+    public function edit(Enlace $id)
     {
-        $enlace = Enlace::find($id);
-        return view('')->with('enlace', $enlace);
+        $enlace = Enlace::findOrFail($id);
+        return view('admin.servidores.enlaces.edit')->with('enlace', $enlace);
     }
 
     /**

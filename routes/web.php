@@ -29,13 +29,13 @@ Route::group(['prefix' => 'admin'], function() {
      ]);
 
      Route::resource('enlaces','EnlaceController');
-     Route::get('enlaces/{nombre}/destroy', [
+     Route::get('enlaces/{id}/destroy', [
         'uses' => 'EnlaceController@destroy',
         'as'   => 'admin.enlaces.destroy'
      ]);
 
      Route::resource('afirmadores','AfirmadorController');
-     Route::get('afirmadores/{nombre}/destroy', [
+     Route::get('afirmadores/{afirmador}/destroy', [
         'uses' => 'AfirmadorController@destroy',
         'as'   => 'admin.afirmadores.destroy'
      ]);
