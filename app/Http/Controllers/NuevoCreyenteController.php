@@ -76,13 +76,13 @@ class NuevoCreyenteController extends Controller
      * @param  \App\NuevoCreyente  $nuevoCreyente
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, NuevoCreyente $cedula)
+    public function update(Request $request, $cedula)
     {
         $creyente = NuevoCreyente::find($cedula);
         $creyente->fill($request->all());
         $creyente->save();
         // flash('El Nuevo Creyente "'. $creyente->nombrePersona.'" Se ah editado con exito', 'warning');
-        return redirect()->route('admin.creyentes.index');
+        return redirect()->route('creyentes.index');
     }
 
     /**
