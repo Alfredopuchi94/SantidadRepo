@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\DiscipuladoN;
+use App\NuevoCreyente;
+use App\Afirmador;
+use Laracasts\Flash\Flash;
 use Illuminate\Http\Request;
 
 class DiscipuladoNController extends Controller
@@ -12,9 +15,9 @@ class DiscipuladoNController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($cedula)
     {
-        //
+        
     }
 
     /**
@@ -22,9 +25,10 @@ class DiscipuladoNController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($cedula)
     {
-        //
+        $creyente = NuevoCreyente::find($cedula);
+        return view('admin.creyentes.discipuladoN.create')->with('creyente',$creyente);
     }
 
     /**
@@ -35,7 +39,8 @@ class DiscipuladoNController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $creyente = new NuevoCreyente($requet->all());
+        $creyente->save();
     }
 
     /**
