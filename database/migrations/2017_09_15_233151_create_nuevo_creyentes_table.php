@@ -22,12 +22,12 @@ class CreateNuevoCreyentesTable extends Migration
             $table->date('fechaServicio');
             $table->string('descripcion');
             $table->integer('edad');
-            $table->string('dire');
-            $table->integer('telf');
-            $table->string('email');
-            $table->string('invitacion');
-            $table->string('oracion');
-            $table->string('lider');
+            $table->string('dire')->nullable();
+            $table->integer('telf')->nullable();
+            $table->string('email')->nullable();
+            $table->string('invitacion')->nullable();
+            $table->string('oracion')->nullable();
+            $table->string('lider')->nullable();
             $table->integer('id_afirmador')->unsigned();
 
             $table->foreign('id_afirmador')->references('id')->on('afirmadors')->onDelete('no action');

@@ -16,9 +16,11 @@ class CreateAfirmadorsTable extends Migration
         Schema::create('afirmadors', function (Blueprint $table) {
             $table->increments('id');
              $table->string('nombreAfirmador')->unique();
-            $table->integer('id_enlace')->unsigned();
+            $table->integer('id_enlace')->unsigned()->nullable();
 
-            $table->foreign('id_enlace')->references('id')->on('enlaces')->onDelete('no action');
+            $table->foreign('id_enlace')->references('id')->on('enlaces')
+                                                    ->onUpdate('cascade')
+                                                    ->onAction('set null');
             $table->timestamps();
         });
     }
