@@ -15,7 +15,6 @@ class CreateDiscipuladoNsTable extends Migration
     {
         Schema::create('discipulado_ns', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('Cedula');
             $table->enum('genero', ['masculino','femenino'])->default('masculino');
             $table->date('fechaIni');
             $table->date('fechaFin');
