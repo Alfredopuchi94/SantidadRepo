@@ -81,9 +81,9 @@
 
 					  <div class="row">
 
-						  <div class="form-group col" value="{{$creyente->lider}}"  name="lider">
-						    <label for="nombrelider">Nombre del lider</label>
-						    <input type="text" class="form-control" name="lider">
+						  <div class="form-group col">
+						    <label for="lider">Nombre del lider</label>
+						    <input type="text" class="form-control" name="lider" value="{{$creyente->lider}}">
 						  </div> 
 					  	
 					  </div>
@@ -92,7 +92,7 @@
 						{{ Form::label('id_afirmador', 'Asignar un afirmador')}}
 						<select name="id_afirmador" class="form-control" required>
 
-							<option value="{{ $$creyente->id_afirmador}}" selected>{{ $$creyente->afirmador->id_afirmado }}</option>
+							<option value="{{ $creyente->id_afirmador}}" selected>Anterior: {{ $creyente->afirmador->nombreAfirmador}}</option>
 							@foreach($afirmadores as $afirmador) 
 								<option value="{{ $afirmador->id}}"> {{ $afirmador->nombreAfirmador }} </option>
 							@endforeach
