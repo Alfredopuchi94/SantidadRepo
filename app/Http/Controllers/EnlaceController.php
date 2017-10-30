@@ -90,7 +90,7 @@ class EnlaceController extends Controller
      * @param  \App\Enlace  $enlace
      * @return \Illuminate\Http\Response
      */
-    public function destroy($enlace)
+    public function destroy($id)
     {
         $enlace = Enlace::find($id);
         $enlace->delete(); 
