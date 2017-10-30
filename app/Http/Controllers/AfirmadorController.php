@@ -82,7 +82,7 @@ class AfirmadorController extends Controller
         $afirmador = Afirmador::find($id);
         $afirmador->fill($request->all());
         $afirmador->save();
-        flash('El Afirmador "'. $afirmador->nombreAfirmador .'" Se ah editado con exito', 'warning');
+        // flash('El Afirmador "'. $afirmador->nombreAfirmador .'" Se ah editado con exito', 'warning');
         return redirect()->route('admin.servidores.index');
     }
 
@@ -94,10 +94,13 @@ class AfirmadorController extends Controller
      */
     public function destroy($id)
     {
-        $afirmador = Afirmador::find($id);
-        $afirmador->delete();
-
-        Flash::error("El Afirmador " .$afirmador->nombreAfirmador . "a sido borrado de forma exitosa");
-        return redirect()->route('servidores.index');
+        try{
+            $afirmador = Afirmador::find($id);
+            $afirmador->delete();
+         } catch ( \Illuminate\Database\QueryException $e) {
+            
+        }
+            // Flash::error("El Afirmador " .$afirmador->nombreAfirmador . "a sido borrado de forma exitosa");
+            return redirect()->route('admin.servidores.index');
     }
 }

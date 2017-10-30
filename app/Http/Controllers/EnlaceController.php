@@ -92,9 +92,13 @@ class EnlaceController extends Controller
      */
     public function destroy($id)
     {
-        $enlace = Enlace::find($id);
-        $enlace->delete(); 
-        Flash::error("El enlace " . $enlace->nombreEnlace . "a sido borrado de forma exitosa");
-        return redirect()->route('servidores.index');
+        try {
+            $enlace = Enlace::find($id);
+            $enlace->delete(); 
+            Flash::error("El enlace " . $enlace->nombreEnlace . "a sido borrado de forma exitosa");
+        } catch ( \Illuminate\Database\QueryException $e) {
+            
+        }
+            return redirect()->route('admin.servidores.index');
     }
 }
