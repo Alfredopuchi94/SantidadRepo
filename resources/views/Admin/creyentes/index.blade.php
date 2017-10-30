@@ -34,7 +34,8 @@
 							<th>Nombre del Lider</th>
 							<th>Afirmador Asignado</th>
 							<th><i class="fa fa-pencil-square-o  fa-2x" aria-hidden="true"></i></th>	
-							<th><i class="fa fa-trash-o  fa-2x" aria-hidden="true"></i></th>	
+							<th><i class="fa fa-trash-o  fa-2x" aria-hidden="true"></i></th>
+							<th>DNC</th>	
 					  </thead>
 					    <tbody>
 						    @foreach($creyentes as $creyente)
@@ -54,6 +55,8 @@
 							 	<td>{{ $creyente->afirmador->nombreAfirmador }}</td>
 							 	<td> <a href="{{ route('creyentes.edit', $creyente->cedula) }}" class="btn btn-warning btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a> </td>
 							 	<td> <a href="{{ route('admin.creyentes.destroy', $creyente->cedula) }}" onclick="return confirm('¿esta seguro de elimar a esta persona?')" class="btn btn-danger btn-sm"> <i class="fa fa-trash-o" aria-hidden="true"></i></a>
+							    </td>
+							    <td> <a href="{{ route('discipulado.create', $creyente->cedula) }}" class="btn btn-info btn-sm"> <i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
 							    </td>
 							  </tr>
 							@endforeach
