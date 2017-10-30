@@ -62,7 +62,7 @@ class NuevoCreyenteController extends Controller
      * @param  \App\NuevoCreyente  $nuevoCreyente
      * @return \Illuminate\Http\Response
      */
-    public function edit(NuevoCreyente $cedula)
+    public function edit($cedula)
     {
         $creyente = NuevoCreyente::find($cedula);
         $afirmadores = Afirmador::all();
