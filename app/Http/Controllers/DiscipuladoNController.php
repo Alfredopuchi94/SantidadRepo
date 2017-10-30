@@ -41,6 +41,8 @@ class DiscipuladoNController extends Controller
     {
         $creyente = new NuevoCreyente($requet->all());
         $creyente->save();
+
+        
     }
 
     /**
