@@ -11,7 +11,7 @@
 		   			 <h3 class="headertitle">Registrar Afirmador</h3>
 		 		</div>
 		  		<div class="card-body">
-		    		{!! Form::open(['route' => 'afirmadores.update', 'method' => 'PUT', 'files' => true] ) !!}
+		    		{!! Form::open(['route' => ['afirmadores.update', $afirmador], 'method' => 'PUT', 'files' => true] ) !!}
 					  <div class="form-group">
 					    <label for="nombreAfirmador">Nombre del Afirmador</label>
 					    <input 
@@ -35,7 +35,7 @@
 					  </div>
 
 					  <div class="text-right">
-					  	<button type="button" class="btn btn-alt w-50 ">Modificar afirmador</button>
+					  	<button type="submit" class="btn btn-alt w-50 ">Modificar afirmador</button>
 					  </div>
 					{!! Form::close() !!}
 		  		</div>
