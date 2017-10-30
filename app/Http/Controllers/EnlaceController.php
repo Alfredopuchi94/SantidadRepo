@@ -52,7 +52,7 @@ class EnlaceController extends Controller
      * @param  \App\Enlace  $enlace
      * @return \Illuminate\Http\Response
      */
-    public function show(Enlace $enlace)
+    public function showdd($enlace)
     {
     }
 
@@ -75,12 +75,12 @@ class EnlaceController extends Controller
      * @param  \App\Enlace  $enlace
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Enlace $enlace)
+    public function update(Request $request, $id)
     {
         $enlace = Enlace::find($id);
         $enlace->fill($request->all());
         $enlace->save();
-        flash('El Enlace "'. $enlace->nombreEnlace.'" Se ah editado con exito', 'warning');
+        // flash('El Enlace "'. $enlace->nombreEnlace.'" Se ah editado con exito', 'warning');
         return redirect()->route('admin.servidores.index');
     }
 
@@ -90,7 +90,7 @@ class EnlaceController extends Controller
      * @param  \App\Enlace  $enlace
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Enlace $enlace)
+    public function destroy($enlace)
     {
         $enlace = Enlace::find($id);
         $enlace->delete(); 

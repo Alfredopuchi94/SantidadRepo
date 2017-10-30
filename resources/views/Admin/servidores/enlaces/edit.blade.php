@@ -11,7 +11,7 @@
 		   			 <h3 class="headertitle">Registrar Enlace</h3>
 		 		</div>
 		  		<div class="card-body">
-		    		{!! Form::open(['route' => ['enlaces.update', $enlace], 'method' => 'PUT', 'files' => true] ) !!}
+		    		{!! Form::open(['route' => ['enlaces.update', $enlace], 'method' => 'PUT'] ) !!}
 					  <div class="form-group">
 					    <label for="nombreEnlace">Nombre del Enlace</label>
 					    <input 
