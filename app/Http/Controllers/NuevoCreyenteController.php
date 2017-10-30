@@ -78,7 +78,7 @@ class NuevoCreyenteController extends Controller
      */
     public function update(Request $request, NuevoCreyente $cedula)
     {
-        $creyente = NuevoCreyente::find($id);
+        $creyente = NuevoCreyente::find($cedula);
         $creyente->fill($request->all());
         $creyente->save();
         // flash('El Nuevo Creyente "'. $creyente->nombrePersona.'" Se ah editado con exito', 'warning');
