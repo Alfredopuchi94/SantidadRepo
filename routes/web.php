@@ -40,6 +40,12 @@ Route::group(['prefix' => 'admin'], function() {
         'as'   => 'admin.afirmadores.destroy'
      ]);
 
+     Route::resource('discipulado','DiscipuladoNController');
+     Route::get('discipulado/{id}/destroy', [
+        'uses' => 'DiscipuladoNController@destroy',
+        'as'   => 'admin.discipulado.destroy'
+     ]);
+
      Route::get('servidores', [
         'uses' => 'ServidorController@index',
         'as'   => 'admin.servidores.index'
