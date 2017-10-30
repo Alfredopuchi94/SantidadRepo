@@ -45,6 +45,10 @@ Route::group(['prefix' => 'admin'], function() {
         'uses' => 'DiscipuladoNController@destroy',
         'as'   => 'admin.discipulado.destroy'
      ]);
+     Route::get('discipulado/{cedula}/create', [
+        'uses' => 'DiscipuladoNController@create',
+        'as'   => 'discipulado.create'
+     ]);
 
      Route::get('servidores', [
         'uses' => 'ServidorController@index',
