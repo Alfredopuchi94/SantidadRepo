@@ -63,7 +63,7 @@ class AfirmadorController extends Controller
      * @param  \App\Afirmador  $afirmador
      * @return \Illuminate\Http\Response
      */
-    public function edit(Afirmador $id)
+    public function edit($id)
     {
         $afirmador = Afirmador::find($id);
         $enlaces = Enlace::all();
@@ -77,7 +77,7 @@ class AfirmadorController extends Controller
      * @param  \App\Afirmador  $afirmador
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Afirmador $id)
+    public function update(Request $request, $id)
     {
         $afirmador = Afirmador::find($id);
         $afirmador->fill($request->all());
@@ -92,7 +92,7 @@ class AfirmadorController extends Controller
      * @param  \App\Afirmador  $afirmador
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Afirmador $id)
+    public function destroy($id)
     {
         $afirmador = Afirmador::find($id);
         $afirmador->delete();
