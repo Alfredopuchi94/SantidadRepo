@@ -1,6 +1,6 @@
 @extends('template.main')
 
-@section('title', 'crear usuario')
+@section('title', 'Discipulado de Nuevos Creyentes')
 
 @section('content')
 <div class="container">
